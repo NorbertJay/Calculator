@@ -93,9 +93,4 @@ btnclear = Button(btnrow5, text="=", font="Arial 15", relief=GROOVE, bd=0,  fg="
 btnclear.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
 
-
-
-root.mainloop()
-
-
 root.mainloop()
