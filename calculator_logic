@@ -101,6 +101,86 @@ def btnc_clicked(*args):
     disp.delete(0, END)
     disp.insert(0, "0")
     
+    
+# There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+
+def sin_button_clicked():
+    try:
+        ans = float(disp.get())
+        if switch is True:
+            ans = math.sin(math.radians(ans))
+        else:
+            ans = math.sin(ans)
+        disp.delete(0, END)
+        disp.insert(0, str(ans))
+    except Exception:
+        tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+
+def cos_button_clicked():
+    try:
+        ans = float(disp.get())
+        if switch is True:
+            ans = math.cos(math.radians(ans))
+        else:
+            ans = math.cos(ans)
+        disp.delete(0, END)
+        disp.insert(0, str(ans))
+    except Exception:
+        tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+
+def tan_button_clicked():
+    try:
+        ans = float(disp.get())
+        if switch is True:
+            ans = math.tan(math.radians(ans))
+        else:
+            ans = math.tan(ans)
+        disp.delete(0, END)
+        disp.insert(0, str(ans))
+    except Exception:
+        tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+
+def arcsin_clicked():
+    try:
+        ans = float(disp.get())
+        if switch is True:
+            ans = math.degrees(math.asin(ans))
+        else:
+            ans = math.asin(ans)
+        disp.delete(0, END)
+        disp.insert(0, str(ans))
+    except Exception:
+        tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+
+def arccos_button_clicked():
+    try:
+        ans = float(disp.get())
+        if switch is True:
+            ans = math.degrees(math.acos(ans))
+        else:
+            ans = math.acos(ans)
+        disp.delete(0, END)
+        disp.insert(0, str(ans))
+    except Exception:
+        tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+
+def arctan_button_clicked():
+    try:
+        ans = float(disp.get())
+        if switch is True:
+            ans = math.degrees(math.atan(ans))
+        else:
+            ans = math.atan(ans)
+        disp.delete(0, END)
+        disp.insert(0, str(ans))
+    except Exception:
+        tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
 # Continuation ....................
 
 
