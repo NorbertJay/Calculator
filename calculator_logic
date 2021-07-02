@@ -10,10 +10,10 @@ root.title("Scientific Calculator By N2RCL")
 switch = None
 
 
-# These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when clicked
-
 class Calculator:
 
+    # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when clicked
+    
     def number1_button_clicked(c):
         if disp.get() == "0":
             disp.delete(0, END)
@@ -79,8 +79,8 @@ class Calculator:
             disp.delete(0, END)
 
 
-# These functions are for operational symbols (+, -, x, /) buttons when clicked
-
+    # These functions are for operational symbols (+, -, x, /) buttons when clicked
+    
     def plus_button_clicked(c):
         pos = len(disp.get())
         disp.insert(pos, "+")
@@ -102,7 +102,7 @@ class Calculator:
         disp.insert(0, "0")
     
     
-# There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+    # There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
 
     def sin_button_clicked(c):
         try:
@@ -171,6 +171,58 @@ class Calculator:
                 ans = math.degrees(math.atan(ans))
             else:
                 ans = math.atan(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            
+            
+    # There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+
+    def exponent_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, '**')
+
+    def round_button_clicked(c):
+        try:
+            ans = float(disp.get())
+            ans = round(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+    def logarithm_button_clicked(c):
+        try:
+            ans = float(disp.get())
+            ans = math.log10(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            
+    def ln_button_clicked(c):
+        try:
+            ans = float(disp.get())
+            ans = math.log(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")        
+
+    def factorial_button_clicked(c):
+        try:
+            ans = float(disp.get())
+            ans = math.factorial(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
+    def sqr_button_clicked(c):
+        try:
+            ans = float(disp.get())
+            ans = math.sqrt(ans)
             disp.delete(0, END)
             disp.insert(0, str(ans))
         except Exception:
