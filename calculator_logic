@@ -177,20 +177,11 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
             
             
-    # There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+    # There functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
 
     def exponent_button_clicked(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
-
-    def round_button_clicked(c):
-        try:
-            ans = float(disp.get())
-            ans = round(ans)
-            disp.delete(0, END)
-            disp.insert(0, str(ans))
-        except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def logarithm_button_clicked(c):
         try:
@@ -227,6 +218,15 @@ class Calculator:
             disp.insert(0, str(ans))
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            
+    def round_button_clicked(c):
+        try:
+            ans = float(disp.get())
+            ans = round(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")            
 
 # Continuation ....................
 
