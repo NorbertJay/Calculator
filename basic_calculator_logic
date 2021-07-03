@@ -78,7 +78,27 @@ class Calculator:
         if disp.get() == '0':
             disp.delete(0, END)
             
-            
+    # These functions are for operational symbols (+, -, x, /) buttons when clicked
+    
+    def plus_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "+")
+    
+    def minus_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "-")
+
+    def times_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "*")
+
+    def divide_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "/")
+
+    def btnc_clicked(c, *args):
+        disp.delete(0, END)
+        disp.insert(0, "0")
             
 # Continuation...........
 
