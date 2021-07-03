@@ -121,7 +121,7 @@ class Calculator:
             disp.delete(0, END)
             disp.insert(0, display[0:pos-1])
 
-    def btnequals_pressed(c, *args):
+    def btnequal_pressed(c, *args):
         try:
             ans = disp.get()
             ans = eval(ans)
@@ -130,7 +130,6 @@ class Calculator:
             return str(ans)
         except:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
-  
 
     def run(c):
         root.mainloop()
