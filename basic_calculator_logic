@@ -12,63 +12,63 @@ switch = None
 
 class Calculator:
 
-    # These functions are for numbers 0-9 buttons when clicked
+    # These functions are for numbers (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
     
-    def number1_button_clicked(c):
+    def btn1_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "1")
 
-    def number2_button_clicked(c):
+    def btn2_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "2")
 
-    def number3_button_clicked(c):
+    def btn3_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "3")
 
-    def number4_button_clicked(c):
+    def btn4_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "4")
 
-    def number5_button_clicked(c):
+    def btn5_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "5")
 
-    def number6_button_clicked(c):
+    def btn6_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "6")
 
-    def number7_button_clicked(c):
+    def btn7_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "7")
 
-    def number8_button_clicked(c):
+    def btn8_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "8")
 
-    def number9_button_clicked(c):
+    def btn9_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "9")
 
-    def number0_button_clicked(c):
+    def btn0_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
@@ -79,49 +79,49 @@ class Calculator:
             disp.delete(0, END)
             
             
-    # These functions are for operational symbols (+, -, x, /) buttons when clicked
+    # These functions are for operational symbols (+, -, x, /) buttons when pressed
     
-    def plus_button_clicked(c):
+    def btnplus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, "+")
     
-    def minus_button_clicked(c):
+    def btnminus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, "-")
 
-    def times_button_clicked(c):
+    def btnmultiply_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, "*")
 
-    def divide_button_clicked(c):
+    def btndivide_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, "/")
-
-
-    # These functions are for the symbols (dot, clear, delete, equals) buttons when clicked
+        
+        
+    # These functions are for the symbols (dot, clear, delete, equals) buttons when pressed
    
-    def dot_button_clicked(c):
+    def btndot_pressed(c):
         pos = len(disp.get())
-        disp.insert(pos, '.')
+        disp.insert(pos, ".")
 
-    def clear_button_clicked(c, *args):
+    def btnclear_pressed(c, *args):
         disp.delete(0, END)
-        disp.insert(0, '0')
+        disp.insert(0, "0")
 
-    def delete_button_clicked(c):
+    def btndelete_pressed(c):
         pos = len(disp.get())
         display = str(disp.get())
-        if display == '':
-            disp.insert(0, '0')
-        elif display == ' ':
-            disp.insert(0, '0')
-        elif display == '0':
+        if display == " ":
+            disp.insert(0, "0")
+        elif display == " ":
+            disp.insert(0, "0")
+        elif display == "0":
             pass
         else:
             disp.delete(0, END)
             disp.insert(0, display[0:pos-1])
 
-    def equals_button_clicked(c, *args):
+    def btnequal_pressed(c, *args):
         try:
             ans = disp.get()
             ans = eval(ans)
@@ -129,7 +129,7 @@ class Calculator:
             disp.insert(0, ans)
             return str(ans)
         except:
-            tkinter.messagebox.showerror("Value Error", "Values and operators should be checked")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def run(c):
         root.mainloop()
