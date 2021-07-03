@@ -129,7 +129,7 @@ class Calculator:
             disp.insert(0, ans)
             return str(ans)
         except:
-            tkinter.messagebox.showerror("Value Error", "Values and operators should be checked")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
   
 
     def run(c):
