@@ -96,9 +96,6 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, "/")
 
-    def btnc_clicked(c, *args):
-        disp.delete(0, END)
-        disp.insert(0, "0")
             
 # Continuation...........
 
