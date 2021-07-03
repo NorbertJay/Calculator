@@ -3,7 +3,8 @@ from calculator import Calculator
 
 class Test(unittest.TestCase):
     def test_add(self):
-        c = Calculator() 
+        c = Calculator()
+        c.btnclear_pressed()
         c.btn2_pressed()
         c.btnplus_pressed()
         c.btn2_pressed()
