@@ -9,7 +9,7 @@ root.title("N2RCL Basic Calculator")
 
 switch = None
 
-
+# pa change ko sa mga function names. Paki same siya tung nasa test.py namo ni louie kay murag taas ug libog ang function names diri
 class Calculator:
 
     # These functions are for numbers 0-9 buttons when clicked
