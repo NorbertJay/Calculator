@@ -78,6 +78,7 @@ class Calculator:
         if disp.get() == '0':
             disp.delete(0, END)
             
+            
     # These functions are for operational symbols (+, -, x, /) buttons when clicked
     
     def plus_button_clicked(c):
