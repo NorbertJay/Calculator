@@ -96,12 +96,41 @@ class Calculator:
     def divide_button_clicked(c):
         pos = len(disp.get())
         disp.insert(pos, "/")
+        
+        
+    # These functions are for the symbols (dot, clear, delete, equals) buttons when clicked
+   
+    def dot_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, '.')
 
-            
-# Continuation...........
+    def clear_button_clicked(c, *args):
+        disp.delete(0, END)
+        disp.insert(0, '0')
 
+    def delete_button_clicked(c):
+        pos = len(disp.get())
+        display = str(disp.get())
+        if display == '':
+            disp.insert(0, '0')
+        elif display == ' ':
+            disp.insert(0, '0')
+        elif display == '0':
+            pass
+        else:
+            disp.delete(0, END)
+            disp.insert(0, display[0:pos-1])
 
-
+    def equals_button_clicked(c, *args):
+        try:
+            ans = disp.get()
+            ans = eval(ans)
+            disp.delete(0, END)
+            disp.insert(0, ans)
+            return str(ans)
+        except:
+            tkinter.messagebox.showerror("Value Error", "Values and operators should be checked")
+  
 
     def run(c):
         root.mainloop()
