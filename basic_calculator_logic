@@ -1,0 +1,108 @@
+from tkinter import *
+import tkinter.messagebox
+import math
+
+root = Tk()
+root.geometry("650x400+300+300")
+
+root.title("N2RCL Basic Calculator")
+
+switch = None
+
+
+class Calculator:
+
+    # These functions are for numbers 0-9 buttons when clicked
+    
+    def number1_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "1")
+
+    def number2_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "2")
+
+    def number3_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "3")
+
+    def number4_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "4")
+
+    def number5_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "5")
+
+    def number6_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "6")
+
+    def number7_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "7")
+
+    def number8_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "8")
+
+    def number9_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "9")
+
+    def number0_button_clicked(c):
+        if disp.get() == "0":
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, "0")
+
+    def key_event(c, *args):
+        if disp.get() == '0':
+            disp.delete(0, END)
+            
+            
+    # These functions are for operational symbols (+, -, x, /) buttons when clicked
+    
+    def plus_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "+")
+    
+    def minus_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "-")
+
+    def times_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "*")
+
+    def divide_button_clicked(c):
+        pos = len(disp.get())
+        disp.insert(pos, "/")
+
+            
+# Continuation...........
+
+
+
+
+    def run(c):
+        root.mainloop()
+
