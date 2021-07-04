@@ -8,6 +8,8 @@ root = Tk()
 root.geometry("650x400+300+300")
 root.title("Calculator")
 switch = None
+root.minsize(500,300)
+
 
 display_widget = StringVar()
 
