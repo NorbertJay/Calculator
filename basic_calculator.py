@@ -6,6 +6,7 @@ root = Tk()
 root.geometry("650x400+300+300")
 
 root.title("N2RCL Basic Calculator")
+root.minsize(500,300)
 
 switch = None
 
