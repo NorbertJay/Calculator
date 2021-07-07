@@ -95,7 +95,6 @@ class Test(unittest.TestCase):
         c.btn5_pressed()
         c.cos_pressed()
         self.assertEqual(c.btnequal_pressed(), "0.5253219888177297") 
-        
     
     def test_tan(self):
         c = Calculator() 
@@ -110,6 +109,61 @@ class Test(unittest.TestCase):
         c.btn5_pressed()
         c.tan_pressed()
         self.assertEqual(c.btnequal_pressed(), "-3.380515006246586") 
+        
+        def test_arcsin(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.arcsin_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.0")
+    
+    def test_arcsin2(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.dot_pressed()
+        c.btn2_pressed()
+        c.btn4_pressed()
+        c.btn5_pressed()
+        c.arcsin_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.24751969253381592")
+    
+    def test_arccos(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.arccos_pressed()
+        self.assertEqual(c.btnequal_pressed(), "1.5707963267948966")
+    
+    def test_arccos2(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.dot_pressed()
+        c.btn9_pressed()
+        c.btn8_pressed()
+        c.btn5_pressed()
+        c.arccos_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.17342232109560457")
+    
+    def test_arctan(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.arctan_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.0")
+    
+    def test_arctan2(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.dot_pressed()
+        c.btn3_pressed()
+        c.btn9_pressed()
+        c.btn7_pressed()
+        c.btn1_pressed()
+        c.arctan_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.3780038798338324")
         
     def test_round(self):
         c = Calculator() 
