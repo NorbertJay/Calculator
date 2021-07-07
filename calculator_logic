@@ -259,6 +259,7 @@ class Calculator:
         except:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
+
     # These functions are for bl and br buttons when pressed
     
     def btnbl_pressed(c):
@@ -273,12 +274,12 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, ')')
         
+        
     # These functions are for dot, pi, e, conv and ,mod buttons when pressed
     
     def btndot_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '.')
-
 
     def btnpi_pressed(c):
         if disp.get() == '0':
@@ -287,7 +288,6 @@ class Calculator:
         ans = math.pi
         disp.insert(pos, ans)
         return str(ans)
-
 
     def btne_pressed(c):
         if disp.get() == '0':
