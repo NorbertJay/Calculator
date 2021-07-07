@@ -16,7 +16,7 @@
 - Can perform logarithm(log), natural logarithm(ln) and natural number(e)operations.
 - Can perform round, modular (%) and factorial(x!) functions.
 - Can perform other necessary functions: delete, clear all, equals, etc.
-- Has a pop-up messagebox when there is an error in computing.
+- A pop-up messagebox shows up when there is an error in computing.
 - The windows are resizable with a minimun size of 650 by 400 and upto fullscreen.
 
 #### You can accesse the basic version of the basic calculator by running `vers1_basic_calculator.py` and its GUI is located in `vers1_basic_calculator_UI` and the logic is in `vers1_basic_calculator_UI`.
