@@ -96,11 +96,11 @@ class Calculator:
     def btndivide_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '/')
-    
-   
-   # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
 
-   def sin_pressed(c):
+
+    # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+    
+    def sin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -177,10 +177,10 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
- 
-            
-    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
 
+
+    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
+    
     def exponent_button_clicked(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
