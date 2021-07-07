@@ -244,12 +244,8 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")          
             
 
-    # These functions are for clear, delete, and equal buttons when pressed
+    # These functions are for delete, clear (AC), and equal buttons when pressed
     
-    def btnclear_pressed(c, *args):
-        disp.delete(0, END)
-        disp.insert(0, '0')
-        
     def btndelete_pressed(c):
         pos = len(disp.get())
         display = str(disp.get())
@@ -262,7 +258,11 @@ class Calculator:
         else:
             disp.delete(0, END)
             disp.insert(0, display[0:pos-1])
-
+            
+    def btnclear_pressed(c, *args):
+        disp.delete(0, END)
+        disp.insert(0, '0')
+       
     def btnequal_pressed(c, *args):
         try:
             ans = disp.get()
