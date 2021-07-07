@@ -214,7 +214,7 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn4_pressed()
         c.btn9_pressed()
-        c.btnsqr_pressed()
+        c.btnsqrt_pressed()
         self.assertEqual(c.btnequal_pressed(), "7.0")
         
     def test_square_root_and_round(self):
@@ -222,7 +222,7 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn7_pressed()
         c.btn1_pressed()
-        c.btnsqr_pressed()
+        c.btnsqrt_pressed()
         c.btnround_pressed()
         self.assertEqual(c.btnequal_pressed(), "8")
        
