@@ -12,7 +12,7 @@ switch = None
 
 class Calculator:
 
-    # These functions are for numbers (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
+    # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
     
     def btn1_pressed(c):
         if disp.get() == "0":
@@ -98,7 +98,7 @@ class Calculator:
         disp.insert(pos, '/')
 
 
-    # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+    # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
     
     def btnsin_pressed(c):
         try:
@@ -275,7 +275,7 @@ class Calculator:
         disp.insert(pos, ')')
         
         
-    # These functions are for dot, pi, e, conv and ,mod buttons when pressed
+    # These functions are for dot, pi, e, conv and mod buttons when pressed
     
     def btndot_pressed(c):
         pos = len(disp.get())
