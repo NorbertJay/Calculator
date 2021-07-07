@@ -77,8 +77,8 @@ class Calculator:
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
-
-
+            
+            
     # These functions are for operational symbols (+, -, x, /) buttons when clicked
     
     def btnplus_pressed(c):
@@ -96,8 +96,8 @@ class Calculator:
     def btndivide_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '/')
-    
-    
+
+
     # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
     
     def sin_pressed(c):
