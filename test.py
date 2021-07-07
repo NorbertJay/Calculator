@@ -126,7 +126,25 @@ class Test(unittest.TestCase):
         c.btntan_pressed()
         self.assertEqual(c.btnequal_pressed(), "-3.380515006246586") 
         
-     def test_arccos(self):
+    def test_arcsin(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.btnarcsin_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.0")
+    
+    def test_arcsin2(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.btndot_pressed()
+        c.btn2_pressed()
+        c.btn4_pressed()
+        c.btn5_pressed()
+        c.btnarcsin_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.24751969253381592")
+        
+    def test_arccos(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn0_pressed()
