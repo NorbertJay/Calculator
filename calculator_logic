@@ -112,7 +112,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def cos_pressed(c):
         try:
@@ -125,7 +125,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def tan_pressed(c):
         try:
@@ -138,7 +138,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def arcsin_pressed(c):
         try:
@@ -151,7 +151,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def arccos_pressed(c):
         try:
@@ -164,7 +164,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
     def arctan_pressed(c):
         try:
@@ -177,7 +177,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
 
     # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
