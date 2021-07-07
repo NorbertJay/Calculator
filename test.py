@@ -1,16 +1,16 @@
 import unittest
-from calculator import Calculator
+from finalcalculator import Calculator
+
 
 class Test(unittest.TestCase):
     def test_add(self):
-        c = Calculator()
-        c.btnclear_pressed()
+        c = Calculator() 
         c.btn2_pressed()
         c.btnplus_pressed()
         c.btn2_pressed()
         c.btn2_pressed()
         self.assertEqual(c.btnequal_pressed(), "24")
-        
+
     def test_minus(self):
         c = Calculator() 
         c.btnclear_pressed()
@@ -36,32 +36,16 @@ class Test(unittest.TestCase):
         c.btn2_pressed()
         self.assertEqual(c.btnequal_pressed(), "1.0")
     
-    def test_multiple_operations(self):
-        c = Calculator()
-        c.btnclear_pressed() 
-        c.btn9_pressed()
-        c.btn9_pressed()
-        c.btnminus_pressed()
-        c.btn3_pressed()
-        c.btn6_pressed()
-        c.btndivide_pressed()
-        c.btn9_pressed()
-        c.btnplus_pressed()
-        c.btn3_pressed()
-        c.btnmultiply_pressed()
-        c.btn6_pressed()
-        self.assertEqual(c.btnequal_pressed(), "113.0")
-        
     def test_dot_del_par(self):
         c = Calculator()
         c.btnclear_pressed() 
-        c.btnbl_pressed()
+        c.bl_pressed()
         c.btn9_pressed()
         c.btn9_pressed()
         c.btnminus_pressed()
         c.btn3_pressed()
         c.btn6_pressed()
-        c.btnbr_pressed()
+        c.br_pressed()
         c.btndivide_pressed()
         c.btn9_pressed()
         c.btnplus_pressed()
@@ -71,14 +55,14 @@ class Test(unittest.TestCase):
         c.btnmultiply_pressed()
         c.btn1_pressed()
         c.btn0_pressed()
-        c.btndelete_pressed()
+        c.del_pressed()
         self.assertEqual(c.btnequal_pressed(), "25.0")
     
     def test_power(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn9_pressed()
-        c.btnpower_pressed()
+        c.pow_pressed()
         c.btn1_pressed()
         self.assertEqual(c.btnequal_pressed(), "9")
 
@@ -86,7 +70,7 @@ class Test(unittest.TestCase):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn0_pressed()
-        c.btnsin_pressed()
+        c.sin_pressed()
         self.assertEqual(c.btnequal_pressed(), "0.0")
     
     def test_sin2(self):
@@ -94,14 +78,14 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn6_pressed()
         c.btn9_pressed()
-        c.btnsin_pressed()
+        c.sin_pressed()
         self.assertEqual(c.btnequal_pressed(), "-0.11478481378318722")
     
     def test_cos(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn0_pressed()
-        c.btncos_pressed()
+        c.cos_pressed()
         self.assertEqual(c.btnequal_pressed(), "1.0") 
     
     def test_cos2(self):
@@ -109,67 +93,32 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn4_pressed()
         c.btn5_pressed()
-        c.btncos_pressed()
+        c.cos_pressed()
         self.assertEqual(c.btnequal_pressed(), "0.5253219888177297") 
         
+    
     def test_tan(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn0_pressed()
-        c.btntan_pressed()
+        c.tan_pressed()
         self.assertEqual(c.btnequal_pressed(), "0.0") 
 
     def test_tan2(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn5_pressed()
-        c.btntan_pressed()
+        c.tan_pressed()
         self.assertEqual(c.btnequal_pressed(), "-3.380515006246586") 
-        
-    def test_arcsin(self):
-        c = Calculator() 
-        c.btnclear_pressed()
-        c.btn0_pressed()
-        c.btnarcsin_pressed()
-        self.assertEqual(c.btnequal_pressed(), "0.0")
-    
-    def test_arcsin2(self):
-        c = Calculator() 
-        c.btnclear_pressed()
-        c.btn0_pressed()
-        c.btndot_pressed()
-        c.btn2_pressed()
-        c.btn4_pressed()
-        c.btn5_pressed()
-        c.btnarcsin_pressed()
-        self.assertEqual(c.btnequal_pressed(), "0.24751969253381592")
-        
-    def test_arccos(self):
-        c = Calculator() 
-        c.btnclear_pressed()
-        c.btn0_pressed()
-        c.btnarccos_pressed()
-        self.assertEqual(c.btnequal_pressed(), "0.0")
-    
-    def test_arccos2(self):
-        c = Calculator() 
-        c.btnclear_pressed()
-        c.btn0_pressed()
-        c.btndot_pressed()
-        c.btn9_pressed()
-        c.btn8_pressed()
-        c.btn5_pressed()
-        c.btnarccos_pressed()
-        self.assertEqual(c.btnequal_pressed(), "0.17342232109560457")
         
     def test_round(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn6_pressed()
         c.btn6_pressed()
-        c.btndot_pressed()
+        c.dot_pressed()
         c.btn1_pressed()
-        self.assertEqual(c.btnround_pressed(), "66") 
+        self.assertEqual(c.round_pressed(), "66") 
     
     def test_logarithm(self):
         c = Calculator() 
@@ -177,36 +126,36 @@ class Test(unittest.TestCase):
         c.btn1_pressed()
         c.btn0_pressed()
         c.btn0_pressed()
-        c.btnlog_pressed()
-        self.assertEqual(c.btnround_pressed(), "2")
+        c.logarithm_pressed()
+        self.assertEqual(c.round_pressed(), "2")
     
     def test_par(self):
         c = Calculator
         c.btnclear_pressed(c)
         c.btn1_pressed(c)
         c.btnplus_pressed(c)
-        c.btnbl_pressed(c)
+        c.bl_pressed(c)
         c.btn3_pressed(c)
         c.btnminus_pressed(c)
         c.btn2_pressed(c)
         c.btnmultiply_pressed(c)
         c.btn4_pressed(c)
-        c.btnbr_pressed(c)
+        c.br_pressed(c)
         self.assertEqual(c.btnequal_pressed(c), "-4")
     
     def test_ln(self):
         c = Calculator
         c.btnclear_pressed(c)
         c.btn5_pressed(c)
-        c.btnln_pressed(c)
+        c.ln_pressed(c)
         self.assertEqual(c.btnequal_pressed(c), "1.6094379124341003")
-        
+     
     def test_factorial(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn1_pressed()
         c.btn3_pressed()
-        c.btnfact_pressed()
+        c.fact_pressed()
         self.assertEqual(c.btnequal_pressed(), "6227020800")
 
     def test_square_root(self):
@@ -214,7 +163,7 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn4_pressed()
         c.btn9_pressed()
-        c.btnsqrt_pressed()
+        c.sqrt_pressed()
         self.assertEqual(c.btnequal_pressed(), "7.0")
         
     def test_square_root_and_round(self):
@@ -222,14 +171,14 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn7_pressed()
         c.btn1_pressed()
-        c.btnsqrt_pressed()
-        c.btnround_pressed()
+        c.sqrt_pressed()
+        c.round_pressed()
         self.assertEqual(c.btnequal_pressed(), "8")
-       
+
     def test_natural_number(self):
         c = Calculator()
         c.btnclear_pressed()
-        c.btne_pressed()
+        c.e_pressed()
         self.assertEqual(c.btnequal_pressed(), "2.718281828459045")
 
     def test_natural_number2(self):
@@ -237,7 +186,7 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn5_pressed()
         c.btnplus_pressed()
-        c.btne_pressed()
+        c.e_pressed()
         self.assertEqual(c.btnequal_pressed(), "7.718281828459045")
 
     def test_modulus(self):
@@ -245,10 +194,11 @@ class Test(unittest.TestCase):
         c.btnclear_pressed()
         c.btn1_pressed()
         c.btn9_pressed()
-        c.btnmod_pressed()
+        c.mod_pressed()
         c.btn5_pressed()
         self.assertEqual(c.btnequal_pressed(), "4")
-    
+
+
 
 if __name__ == "__main__":
     unittest.main()
