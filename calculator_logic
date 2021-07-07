@@ -85,7 +85,7 @@ class Calculator:
         disp.insert(pos, '0')
 
 
-    # For binding the buttons to the keyboard
+    # This function is for binding the buttons to the keyboard
     
     def key_event(c, *args):
         if disp.get() == '0':
@@ -244,13 +244,9 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")          
             
 
-    # These functions are for clear, delete, and equal buttons when pressed
+    # These functions are for delete, clear (AC), and equal buttons when pressed
     
-    def btnclear_pressed(c, *args):
-        disp.delete(0, END)
-        disp.insert(0, '0')
-        
-    def btndelete_pressed(c):
+     def del_pressed(c):
         pos = len(disp.get())
         display = str(disp.get())
         if display == '':
@@ -262,6 +258,10 @@ class Calculator:
         else:
             disp.delete(0, END)
             disp.insert(0, display[0:pos-1])
+    
+    def btnclear_pressed(c, *args):
+        disp.delete(0, END)
+        disp.insert(0, '0')
 
     def btnequal_pressed(c, *args):
         try:
@@ -269,9 +269,10 @@ class Calculator:
             ans = eval(ans)
             disp.delete(0, END)
             disp.insert(0, ans)
+            return str(ans)
         except:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
-
+            
 
     # These functions are for bl and br buttons when pressed
     
