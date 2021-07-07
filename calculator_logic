@@ -16,69 +16,81 @@ class Calculator:
     # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
     
     def btn1_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "1")
+        disp.insert(pos, '1')
+
 
     def btn2_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "2")
+        disp.insert(pos, '2')
+
 
     def btn3_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "3")
+        disp.insert(pos, '3')
+
 
     def btn4_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "4")
+        disp.insert(pos, '4')
+
 
     def btn5_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "5")
+        disp.insert(pos, '5')
+
 
     def btn6_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "6")
+        disp.insert(pos, '6')
+
 
     def btn7_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "7")
+        disp.insert(pos, '7')
+
 
     def btn8_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "8")
+        disp.insert(pos, '8')
+
 
     def btn9_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "9")
+        disp.insert(pos, '9')
+
 
     def btn0_pressed(c):
-        if disp.get() == "0":
+        if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
-        disp.insert(pos, "0")
+        disp.insert(pos, '0')
 
+
+    # For binding the buttons to the keyboard
+    
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
-            
+
             
    # These functions are for operational symbols (+, -, x, /) buttons when pressed
 
