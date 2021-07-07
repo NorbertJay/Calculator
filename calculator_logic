@@ -12,63 +12,64 @@ switch = None
 
 class Calculator:
 
-    # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when clicked
+
+    # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
     
-    def number1_button_clicked(c):
+    def btn1_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "1")
 
-    def number2_button_clicked(c):
+    def btn2_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "2")
 
-    def number3_button_clicked(c):
+    def btn3_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "3")
 
-    def number4_button_clicked(c):
+    def btn4_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "4")
 
-    def number5_button_clicked(c):
+    def btn5_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "5")
 
-    def number6_button_clicked(c):
+    def btn6_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "6")
 
-    def number7_button_clicked(c):
+    def btn7_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "7")
 
-    def number8_button_clicked(c):
+    def btn8_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "8")
 
-    def number9_button_clicked(c):
+    def btn9_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, "9")
 
-    def number0_button_clicked(c):
+    def btn0_pressed(c):
         if disp.get() == "0":
             disp.delete(0, END)
         pos = len(disp.get())
@@ -79,7 +80,8 @@ class Calculator:
             disp.delete(0, END)
             
             
-    # These functions are for operational symbols (+, -, x, /) buttons when clicked
+            
+    # These functions are for operational symbols (+, -, x, /) buttons when pressed
     
     def btnplus_pressed(c):
         pos = len(disp.get())
@@ -98,9 +100,10 @@ class Calculator:
         disp.insert(pos, '/')
 
 
-    # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+
+    # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
     
-    def sin_pressed(c):
+    def btnsin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -113,7 +116,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
-    def cos_pressed(c):
+    def btncos_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -126,7 +129,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
-    def tan_pressed(c):
+    def btntan_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -139,7 +142,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
-    def arcsin_pressed(c):
+    def btnarcsin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -152,7 +155,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
-    def arccos_pressed(c):
+    def btnarccos_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -165,7 +168,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
-    def arctan_pressed(c):
+    def btnarctan_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -179,7 +182,8 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
 
-    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
+
+    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
     
     def exponent_button_clicked(c):
         pos = len(disp.get())
