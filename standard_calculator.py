@@ -5,7 +5,7 @@ import math
 root = Tk()
 root.geometry("650x400+300+300")
 
-root.title("N2RCL Basic Calculator")
+root.title("N2RCL Standard Calculator")
 root.minsize(650,400)
 
 switch = None
