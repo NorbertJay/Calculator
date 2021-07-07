@@ -77,9 +77,8 @@ class Calculator:
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
-
-#CHARLOTTE UPDATE
-
+            
+            
     # These functions are for operational symbols (+, -, x, /) buttons when clicked
     
     def btnplus_pressed(c):
@@ -178,8 +177,7 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
-
-#CHARLOTTE UPDATE END            
+ 
             
     # There functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
 
