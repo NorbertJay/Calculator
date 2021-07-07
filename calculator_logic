@@ -99,7 +99,7 @@ class Calculator:
         disp.insert(pos, '/')
     
     
-    # There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+    # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
 
    def sin_pressed(c):
         try:
