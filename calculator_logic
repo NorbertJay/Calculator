@@ -324,5 +324,6 @@ class Calculator:
         disp.insert(pos, '%')
 
           
-       
-root.mainloop()
+          
+    def run(c):
+        root.mainloop()
