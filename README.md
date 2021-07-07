@@ -19,7 +19,7 @@
 - A pop-up messagebox shows up when there is an error in computing.
 - The windows are resizable with a minimun size of 650 by 400 and upto fullscreen.
 
-#### You can accesse the basic version of the basic calculator by running `vers1_basic_calculator.py` and its GUI is located in `vers1_basic_calculator_UI` and the logic is in `vers1_basic_calculator_UI`.
+#### You can accesse the basic version of the basic calculator by running `vers1_basic_calculator.py`, and its GUI is located in `vers1_basic_calculator_UI`, and the logic is in `vers1_basic_calculator_UI`.
 
 ### Group Leader
 - Declaro, Norbert Jay V.         -  NorbertJay
