@@ -234,7 +234,35 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")            
 
-# Continuation ....................
+
+    # These functions are for clear, delete, and equal buttons when pressed
+    
+    def btnclear_pressed(c, *args):
+        disp.delete(0, END)
+        disp.insert(0, '0')
+        
+    def del_pressed(c):
+        pos = len(disp.get())
+        display = str(disp.get())
+        if display == '':
+            disp.insert(0, '0')
+        elif display == ' ':
+            disp.insert(0, '0')
+        elif display == '0':
+            pass
+        else:
+            disp.delete(0, END)
+            disp.insert(0, display[0:pos-1])
+
+    def btneq_pressed(c, *args):
+        try:
+            ans = disp.get()
+            ans = eval(ans)
+            disp.delete(0, END)
+            disp.insert(0, ans)
+        except:
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+
 
 
 root.mainloop()
