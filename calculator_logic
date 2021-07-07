@@ -6,6 +6,7 @@ root = Tk()
 root.geometry("650x400+300+300")
 
 root.title("Scientific Calculator By N2RCL")
+root.minsize(650,400)
 
 switch = None
 
@@ -79,8 +80,8 @@ class Calculator:
             disp.delete(0, END)
             
             
-    # These functions are for operational symbols (+, -, x, /) buttons when pressed
-    
+   # These functions are for operational symbols (+, -, x, /) buttons when pressed
+
     def btnplus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '+')
@@ -99,8 +100,8 @@ class Calculator:
 
 
     # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
-    
-    def btnsin_pressed(c):
+   
+    def sin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -111,9 +112,9 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-    def btncos_pressed(c):
+    def cos_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -124,9 +125,9 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-    def btntan_pressed(c):
+    def tan_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -137,9 +138,9 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-    def btnarcsin_pressed(c):
+    def arcsin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -150,9 +151,9 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-    def btnarccos_pressed(c):
+    def arccos_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -163,9 +164,9 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-    def btnarctan_pressed(c):
+    def arctan_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -176,7 +177,7 @@ class Calculator:
             disp.insert(0, str(ans))
             return str(ans)
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
 
     # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
