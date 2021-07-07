@@ -112,7 +112,6 @@ class Test(unittest.TestCase):
         c.btncos_pressed()
         self.assertEqual(c.btnequal_pressed(), "0.5253219888177297") 
         
-    
     def test_tan(self):
         c = Calculator() 
         c.btnclear_pressed()
@@ -126,6 +125,24 @@ class Test(unittest.TestCase):
         c.btn5_pressed()
         c.btntan_pressed()
         self.assertEqual(c.btnequal_pressed(), "-3.380515006246586") 
+        
+     def test_arccos(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.btnarccos_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.0")
+    
+    def test_arccos2(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn0_pressed()
+        c.btndot_pressed()
+        c.btn9_pressed()
+        c.btn8_pressed()
+        c.btn5_pressed()
+        c.btnarccos_pressed()
+        self.assertEqual(c.btnequal_pressed(), "0.17342232109560457")
         
     def test_round(self):
         c = Calculator() 
