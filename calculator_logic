@@ -1,3 +1,16 @@
+from tkinter import *
+import tkinter.messagebox
+import math
+
+
+root = Tk()
+root.geometry("650x400+300+300")
+
+root.title("Calculator by N2RCL")
+root.minsize(650,400)
+
+switch = None
+
 # Functions for pressing the buttons
 
 class Calculator:
@@ -186,7 +199,7 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
 
-    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
+    # These functions are for additional operations (exponents, logarithm, factorial, square root, round) buttons when pressed
     def pow_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
