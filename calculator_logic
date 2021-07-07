@@ -79,7 +79,7 @@ class Calculator:
             disp.delete(0, END)
 
 
-     # These functions are for operational symbols (+, -, x, /) buttons when clicked
+    # These functions are for operational symbols (+, -, x, /) buttons when clicked
     
     def btnplus_pressed(c):
         pos = len(disp.get())
