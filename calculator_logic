@@ -179,7 +179,7 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
  
             
-    # There functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
+    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
 
     def exponent_button_clicked(c):
         pos = len(disp.get())
