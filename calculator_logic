@@ -78,6 +78,7 @@ class Calculator:
         if disp.get() == '0':
             disp.delete(0, END)
 
+
      # These functions are for operational symbols (+, -, x, /) buttons when clicked
     
     def btnplus_pressed(c):
@@ -96,6 +97,87 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '/')
     
+    
+    # There functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when clicked
+    
+    def sin_pressed(c):
+        try:
+            ans = float(disp.get())
+            if switch is True:
+                ans = math.sin(math.radians(ans))
+            else:
+                ans = math.sin(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+            return str(ans)
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+
+    def cos_pressed(c):
+        try:
+            ans = float(disp.get())
+            if switch is True:
+                ans = math.cos(math.radians(ans))
+            else:
+                ans = math.cos(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+            return str(ans)
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+
+    def tan_pressed(c):
+        try:
+            ans = float(disp.get())
+            if switch is True:
+                ans = math.tan(math.radians(ans))
+            else:
+                ans = math.tan(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+            return str(ans)
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+
+    def arcsin_pressed(c):
+        try:
+            ans = float(disp.get())
+            if switch is True:
+                ans = math.degrees(math.asin(ans))
+            else:
+                ans = math.asin(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+            return str(ans)
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+
+    def arccos_pressed(c):
+        try:
+            ans = float(disp.get())
+            if switch is True:
+                ans = math.degrees(math.acos(ans))
+            else:
+                ans = math.acos(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+            return str(ans)
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+
+    def arctan_pressed(c):
+        try:
+            ans = float(disp.get())
+            if switch is True:
+                ans = math.degrees(math.atan(ans))
+            else:
+                ans = math.atan(ans)
+            disp.delete(0, END)
+            disp.insert(0, str(ans))
+            return str(ans)
+        except Exception:
+            tkinter.messagebox.showerror("Value Error", "Check your values and operators")
+
 
     # There functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when clicked
 
