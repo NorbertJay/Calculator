@@ -6,7 +6,7 @@ root = Tk()
 root.geometry("650x400+300+300")
 
 root.title("N2RCL Basic Calculator")
-root.minsize(500,300)
+root.minsize(650,400)
 
 switch = None
 
@@ -144,6 +144,8 @@ display_widget = StringVar()
 
 disp = Entry(root, text="DISPLAY BAR IS HERE", font="Arial 35", fg="black", bg="white", bd=0, justify=RIGHT, insertbackground="white", cursor="arrow")
 disp.pack(expand=TRUE, fill=BOTH)
+disp.insert(0, '0')
+disp.focus_set()
 
 # To bind/connect to keyboard
 disp.bind("<Return>", c.btnequal_pressed)
@@ -159,9 +161,9 @@ disp.bind("<Key-8>", c.key_event)
 disp.bind("<Key-9>", c.key_event)
 disp.bind("<Key-0>", c.key_event)
 disp.bind("<Key-.>", c.key_event)
-disp.insert(0, '0')
-disp.focus_set()
 
+
+# Calculator UI
 
 # Row 1 Buttons
 
@@ -171,7 +173,7 @@ btnrow1.pack(expand=TRUE, fill=BOTH)
 btn1 = Button(btnrow1, text="1", font="Arial 23", relief=GROOVE, bd=0, command=c.btn1_pressed, fg="white", bg="#333333")
 btn1.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btn2 = Button(btnrow1, text="2", font="Arial 23", relief=GROOVE, bd=0, command=c.btn2_pressed, fg="white", bg="#333333")
+btn2 = Button(btnrow1, text="2", font="Arial 23", relief=GROOVE, bd=0,  command=c.btn2_pressed, fg="white", bg="#333333")
 btn2.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
 btn3 = Button(btnrow1, text="3", font="Arial 23", relief=GROOVE, bd=0, command=c.btn3_pressed, fg="white", bg="#333333")
@@ -189,13 +191,13 @@ btnrow2.pack(expand=TRUE, fill=BOTH)
 btn4 = Button(btnrow2, text="4", font="Arial 23", relief=GROOVE, bd=0, command=c.btn4_pressed, fg="white", bg="#333333")
 btn4.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btn5 = Button(btnrow2, text="5", font="Arial 23", relief=GROOVE, bd=0, command=c.btn5_pressed , fg="white", bg="#333333")
+btn5 = Button(btnrow2, text="5", font="Arial 23", relief=GROOVE, bd=0, command=c.btn5_pressed, fg="white", bg="#333333")
 btn5.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btn6 = Button(btnrow2, text="6", font="Arial 23", relief=GROOVE, bd=0, command=c.btn6_pressed , fg="white", bg="#333333")
+btn6 = Button(btnrow2, text="6", font="Arial 23", relief=GROOVE, bd=0, command=c.btn6_pressed, fg="white", bg="#333333")
 btn6.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btnm = Button(btnrow2, text="-", font="Arial 23", relief=GROOVE, bd=0, command=c.btnminus_pressed , fg="white", bg="#333333")
+btnm = Button(btnrow2, text="-", font="Arial 23", relief=GROOVE, bd=0, command=c.btnminus_pressed, fg="white", bg="#333333")
 btnm.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
 # Row 3 Buttons
@@ -203,17 +205,16 @@ btnm.pack(side=LEFT, expand=TRUE, fill=BOTH)
 btnrow3 = Frame(root)
 btnrow3.pack(expand=TRUE, fill=BOTH)
 
-
-btn7 = Button(btnrow3, text="7", font="Arial 23", relief=GROOVE, bd=0, command=c.btn7_pressed , fg="white", bg="#333333")
+btn7 = Button(btnrow3, text="7", font="Arial 23", relief=GROOVE, bd=0, command=c.btn7_pressed, fg="white", bg="#333333")
 btn7.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btn8 = Button(btnrow3, text="8", font="Arial 23", relief=GROOVE, bd=0, command=c.btn8_pressed , fg="white", bg="#333333")
+btn8 = Button(btnrow3, text="8", font="Arial 23", relief=GROOVE, bd=0, command=c.btn8_pressed, fg="white", bg="#333333")
 btn8.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btn9 = Button(btnrow3, text="9", font="Arial 23", relief=GROOVE, bd=0, command=c.btn9_pressed , fg="white", bg="#333333")
+btn9 = Button(btnrow3, text="9", font="Arial 23", relief=GROOVE, bd=0, command=c.btn9_pressed, fg="white", bg="#333333")
 btn9.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btnml = Button(btnrow3, text="*", font="Arial 23", relief=GROOVE, bd=0, command=c.btnmultiply_pressed , fg="white", bg="#333333")
+btnml = Button(btnrow3, text="*", font="Arial 23", relief=GROOVE, bd=0, command=c.btnmultiply_pressed, fg="white", bg="#333333")
 btnml.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
 # Row 4 Buttons
@@ -221,26 +222,33 @@ btnml.pack(side=LEFT, expand=TRUE, fill=BOTH)
 btnrow4 = Frame(root)
 btnrow4.pack(expand=TRUE, fill=BOTH)
 
-del_btn = Button(btnrow4, text="DEL", font="Arial 15", relief=GROOVE, bd=0, command=c.btndelete_pressed , fg="white", bg="#333333")
-del_btn.pack(side=LEFT, expand=TRUE, fill=BOTH)
+dot_btn = Button(btnrow4, text=" • ", font="Arial 21", relief=GROOVE, bd=0, command=c.btndot_pressed, fg="white", bg="#333333")
+dot_btn.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btn0 = Button(btnrow4, text="0", font="Arial 23", relief=GROOVE, bd=0, command=c.btn0_pressed , fg="white", bg="#333333")
+btn0 = Button(btnrow4, text="0", font="Arial 23", relief=GROOVE, bd=0, command=c.btn0_pressed, fg="white", bg="#333333")
 btn0.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btnequal = Button(btnrow4, text="AC", font="Arial 23", relief=GROOVE, bd=0, command=c.btnclear_pressed , fg="white", bg="#333333")
-btnequal.pack(side=LEFT, expand=TRUE, fill=BOTH)
+del_btn = Button(btnrow4, text="DEL", font="Arial 15", relief=GROOVE, bd=0, command=c.btndelete_pressed, fg="white", bg="#333333")
+del_btn.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-btnd = Button(btnrow4, text="/", font="Arial 23", relief=GROOVE, bd=0, command=c.btndivide_pressed , fg="white", bg="#333333")
+btnd = Button(btnrow4, text="/", font="Arial 23", relief=GROOVE, bd=0, command=c.btndivide_pressed, fg="white", bg="#333333")
 btnd.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
-# Row 5 Buttons
+# Row 4 Buttons
 
 btnrow5 = Frame(root)
 btnrow5.pack(expand=TRUE, fill=BOTH)
 
-btnclear = Button(btnrow5, text="=", font="Arial 15", relief=GROOVE, bd=0, command=c.btnequal_pressed, fg="white", bg="#333333")
+btnclear = Button(btnrow5, text="AC", font="Arial 15", relief=GROOVE, bd=0, command=c.btnclear_pressed, fg="white", bg="#333333")
 btnclear.pack(side=LEFT, expand=TRUE, fill=BOTH)
+
+btnequal = Button(btnrow5, text="=", font="Arial 23", relief=GROOVE, bd=0, command=c.btnequal_pressed, fg="white", bg="#333333")
+btnequal.pack(side=LEFT, expand=TRUE, fill=BOTH)
+
+
 
 
 if __name__ == "__main__":
     c.run()
+
+
