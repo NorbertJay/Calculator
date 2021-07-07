@@ -12,7 +12,6 @@ switch = None
 
 class Calculator:
 
-
     # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
     
     def btn1_pressed(c):
@@ -80,7 +79,6 @@ class Calculator:
             disp.delete(0, END)
             
             
-            
     # These functions are for operational symbols (+, -, x, /) buttons when pressed
     
     def btnplus_pressed(c):
@@ -98,7 +96,6 @@ class Calculator:
     def btndivide_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '/')
-
 
 
     # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
@@ -182,14 +179,13 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
 
-
     # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
     
-    def exponent_button_clicked(c):
+    def btnpower_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
 
-    def logarithm_button_clicked(c):
+    def btnlog_pressed(c):
         try:
             ans = float(disp.get())
             ans = math.log10(ans)
@@ -198,7 +194,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
             
-    def ln_button_clicked(c):
+    def btnln_pressed(c):
         try:
             ans = float(disp.get())
             ans = math.log(ans)
@@ -207,7 +203,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")        
 
-    def factorial_button_clicked(c):
+    def btnfact_pressed(c):
         try:
             ans = float(disp.get())
             ans = math.factorial(ans)
@@ -216,7 +212,7 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
-    def sqr_button_clicked(c):
+    def btnsqrt_pressed(c):
         try:
             ans = float(disp.get())
             ans = math.sqrt(ans)
@@ -225,15 +221,15 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
             
-    def round_button_clicked(c):
+    def btnround_pressed(c):
         try:
             ans = float(disp.get())
             ans = round(ans)
             disp.delete(0, END)
             disp.insert(0, str(ans))
         except Exception:
-            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")            
-
+            tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")          
+            
 
     # These functions are for clear, delete, and equal buttons when pressed
     
@@ -241,7 +237,7 @@ class Calculator:
         disp.delete(0, END)
         disp.insert(0, '0')
         
-    def del_pressed(c):
+    def btndelete_pressed(c):
         pos = len(disp.get())
         display = str(disp.get())
         if display == '':
@@ -254,7 +250,7 @@ class Calculator:
             disp.delete(0, END)
             disp.insert(0, display[0:pos-1])
 
-    def btneq_pressed(c, *args):
+    def btnequal_pressed(c, *args):
         try:
             ans = disp.get()
             ans = eval(ans)
@@ -264,5 +260,56 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Make sure your values and operators are correct")
 
 
+    # These functions are for bl and br buttons when pressed
+    
+    def btnbl_pressed(c):
+        if disp.get() == '0':
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, '(')
+        
+    def btnbr_pressed(c):
+        if disp.get() == '0':
+            disp.delete(0, END)
+        pos = len(disp.get())
+        disp.insert(pos, ')')
+        
+        
+    # These functions are for dot, pi, e, conv and mod buttons when pressed
+    
+    def btndot_pressed(c):
+        pos = len(disp.get())
+        disp.insert(pos, '.')
 
+    def btnpi_pressed(c):
+        if disp.get() == '0':
+            disp.delete(0, END)
+        pos = len(disp.get())
+        ans = math.pi
+        disp.insert(pos, ans)
+        return str(ans)
+
+    def btne_pressed(c):
+        if disp.get() == '0':
+            disp.delete(0, END)
+        pos = len(disp.get())
+        ans = math.e
+        disp.insert(pos, ans)
+        return str(ans)
+        
+    def btnconv_pressed(c):
+        global switch
+        if switch is None:
+            switch = True
+            conv_btn['text'] = "Deg"
+        else:
+            switch = None
+            conv_btn['text'] = "Rad"
+   
+    def btnmod_pressed(c):
+        pos = len(disp.get())
+        disp.insert(pos, '%')
+
+          
+       
 root.mainloop()
