@@ -110,7 +110,7 @@ class Test(unittest.TestCase):
         c.tan_pressed()
         self.assertEqual(c.btnequal_pressed(), "-3.380515006246586") 
         
-        def test_arcsin(self):
+    def test_arcsin(self):
         c = Calculator() 
         c.btnclear_pressed()
         c.btn0_pressed()
