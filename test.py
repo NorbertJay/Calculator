@@ -165,6 +165,33 @@ class Test(unittest.TestCase):
         c.btn5_pressed(c)
         c.ln_pressed(c)
         self.assertEqual(c.btnequal_pressed(c), "1.6094379124341003")
+        
+    def test_factorial(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn1_pressed()
+        c.btn3_pressed()
+        c.fact_pressed()
+        self.assertEqual(c.btnequal_pressed(), "6227020800")
+
+    def test_square_root(self):
+        c = Calculator() 
+        c.btnclear_pressed()
+        c.btn4_pressed()
+        c.btn9_pressed()
+        c.sqr_pressed()
+        self.assertEqual(c.btnequal_pressed(), "7.0")
+        
+    def test_square_root_and_round(self):
+        c = Calculator()
+        c.btnclear_pressed()
+        c.btn7_pressed()
+        c.btn1_pressed()
+        c.sqr_pressed()
+        c.round_pressed()
+        self.assertEqual(c.btnequal_pressed(), "8")
+       
+
     
 
 
