@@ -88,13 +88,15 @@ class Calculator:
         disp.insert(pos, '0')
 
 
-    # For binding the buttons to the keyboard
+    # This function is for binding the buttons to the keyboard
+
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
 
     
     # These functions are for operational symbols (+, -, x, /) buttons when pressed
+
     def btnplus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '+')
@@ -116,6 +118,7 @@ class Calculator:
 
 
     # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
+
     def sin_pressed(c):
         try:
             ans = float(disp.get())
@@ -201,6 +204,7 @@ class Calculator:
 
 
     # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
+
     def pow_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
@@ -311,7 +315,7 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '%')
 
-    # For delete, clear(AC) and equal buttons
+    # These functions are for delete, clear(AC) and equal buttons when pressed
 
     def del_pressed(c):
         pos = len(disp.get())
