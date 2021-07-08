@@ -11,7 +11,6 @@ root.minsize(650,400)
 
 switch = None
 
-# Functions for pressing the buttons
 
 class Calculator:
 
@@ -87,13 +86,15 @@ class Calculator:
         disp.insert(pos, '0')
 
 
-    # For binding the buttons to the keyboard
+    # These function is for binding the buttons to the keyboard
+   
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
 
     
     # These functions are for operational symbols (+, -, x, /) buttons when pressed
+    
     def btnplus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '+')
@@ -115,7 +116,8 @@ class Calculator:
 
 
     # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
-    def sin_pressed(c):
+    
+   def sin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -200,6 +202,7 @@ class Calculator:
 
 
     # These functions are for additional operations (exponents, logarithm, factorial, square root, round) buttons when pressed
+
     def pow_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
@@ -250,6 +253,7 @@ class Calculator:
 
 
     # These functions are for dot ".", pi, natural log (ln), natural number (e), convert (Radian & Degress), open (bl) & close(br) brackets, and Remainder integer (Modulo) buttons when pressed
+
     def dot_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '.')
@@ -310,7 +314,8 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '%')
 
-    # For delete, clear(AC) and equal buttons
+
+    # These function are for delete, clear(AC) and equal buttons
 
     def del_pressed(c):
         pos = len(disp.get())
