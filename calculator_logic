@@ -15,6 +15,7 @@ switch = None
 # Functions for pressing the buttons
 
 class Calculator:
+    
 
     # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
 
@@ -24,13 +25,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '1')
 
-
     def btn2_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '2')
-
 
     def btn3_pressed(c):
         if disp.get() == '0':
@@ -38,13 +37,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '3')
 
-
     def btn4_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '4')
-
 
     def btn5_pressed(c):
         if disp.get() == '0':
@@ -52,13 +49,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '5')
 
-
     def btn6_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '6')
-
 
     def btn7_pressed(c):
         if disp.get() == '0':
@@ -66,13 +61,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '7')
 
-
     def btn8_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '8')
-
 
     def btn9_pressed(c):
         if disp.get() == '0':
@@ -89,28 +82,25 @@ class Calculator:
 
 
     # This function is for binding the buttons to the keyboard
-   
+
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
 
     
     # These functions are for operational symbols (+, -, x, /) buttons when pressed
-    
+
     def btnplus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '+')
-
 
     def btnminus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '-')
 
-
     def btnmultiply_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '*')
-
 
     def btndivide_pressed(c):
         pos = len(disp.get())
@@ -118,8 +108,8 @@ class Calculator:
 
 
     # These functions are for trigonometric operations (sin, cos, tan, arcsin, arccos, arctan) buttons when pressed
-    
-   def sin_pressed(c):
+
+    def sin_pressed(c):
         try:
             ans = float(disp.get())
             if switch is True:
@@ -131,7 +121,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def cos_pressed(c):
         try:
@@ -146,7 +135,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def tan_pressed(c):
         try:
             ans = float(disp.get())
@@ -159,7 +147,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def arcsin_pressed(c):
         try:
@@ -174,7 +161,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def arccos_pressed(c):
         try:
             ans = float(disp.get())
@@ -187,7 +173,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def arctan_pressed(c):
         try:
@@ -203,12 +188,11 @@ class Calculator:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
 
-    # These functions are for additional operations (exponents, logarithm, factorial, square root, round) buttons when pressed
+    # These functions are for additional operations (exponents, logarithm, ln, factorial, square root, round) buttons when pressed
 
     def pow_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '**')
-
 
     def round_pressed(c):
         try:
@@ -220,7 +204,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def logarithm_pressed(c):
         try:
             ans = float(disp.get())
@@ -231,7 +214,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def fact_pressed(c):
         try:
             ans = float(disp.get())
@@ -241,7 +223,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def sqrt_pressed(c):
         try:
@@ -255,11 +236,10 @@ class Calculator:
 
 
     # These functions are for dot ".", pi, natural log (ln), natural number (e), convert (Radian & Degress), open (bl) & close(br) brackets, and Remainder integer (Modulo) buttons when pressed
-
+    
     def dot_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '.')
-
 
     def pi_pressed(c):
         if disp.get() == '0':
@@ -269,7 +249,6 @@ class Calculator:
         disp.insert(pos, ans)
         return str(ans)
 
-
     def e_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
@@ -278,18 +257,15 @@ class Calculator:
         disp.insert(pos, ans)
         return str(ans)
 
-
     def bl_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '(')
 
-
     def br_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, ')')
-
 
     def conv_pressed(c):
         global switch
@@ -300,7 +276,6 @@ class Calculator:
             switch = None
             conv_btn['text'] = "Rad"
 
-
     def ln_pressed(c):
         try:
             ans = float(disp.get())
@@ -310,14 +285,13 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
-
+       
     def mod_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '%')
+        
 
-
-    # These function are for delete, clear(AC) and equal buttons when pressed
+    # These functions are for delete, clear(AC) and equal buttons when pressed
 
     def del_pressed(c):
         pos = len(disp.get())
