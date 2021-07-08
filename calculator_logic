@@ -89,6 +89,7 @@ class Calculator:
 
 
     # This function is for binding the buttons to the keyboard
+
     def key_event(c, *args):
         if disp.get() == '0':
             disp.delete(0, END)
@@ -316,7 +317,7 @@ class Calculator:
         disp.insert(pos, '%')
 
 
-    # These functions are for delete, clear(AC) and equal buttons
+    # These functions are for delete, clear(AC) and equal buttons when pressed
 
     def del_pressed(c):
         pos = len(disp.get())
@@ -347,4 +348,5 @@ class Calculator:
 
     
     def run(c):
-        root.mainloop()
+        root.mainloop() 
+
