@@ -12,6 +12,8 @@ root.minsize(650,400)
 switch = None
 
 
+# Functions for pressing the buttons
+
 class Calculator:
 
     # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
@@ -86,7 +88,7 @@ class Calculator:
         disp.insert(pos, '0')
 
 
-    # These function is for binding the buttons to the keyboard
+    # This function is for binding the buttons to the keyboard
    
     def key_event(c, *args):
         if disp.get() == '0':
@@ -315,7 +317,7 @@ class Calculator:
         disp.insert(pos, '%')
 
 
-    # These function are for delete, clear(AC) and equal buttons
+    # These function are for delete, clear(AC) and equal buttons when pressed
 
     def del_pressed(c):
         pos = len(disp.get())
