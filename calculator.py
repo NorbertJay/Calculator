@@ -15,6 +15,7 @@ switch = None
 # Functions for pressing the buttons
 
 class Calculator:
+    
 
     # These functions are for number (1, 2, 3, 4, 5, 6, 7, 8, 9, 0) buttons when pressed
 
@@ -24,13 +25,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '1')
 
-
     def btn2_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '2')
-
 
     def btn3_pressed(c):
         if disp.get() == '0':
@@ -38,13 +37,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '3')
 
-
     def btn4_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '4')
-
 
     def btn5_pressed(c):
         if disp.get() == '0':
@@ -52,13 +49,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '5')
 
-
     def btn6_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '6')
-
 
     def btn7_pressed(c):
         if disp.get() == '0':
@@ -66,13 +61,11 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '7')
 
-
     def btn8_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '8')
-
 
     def btn9_pressed(c):
         if disp.get() == '0':
@@ -101,16 +94,13 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '+')
 
-
     def btnminus_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '-')
 
-
     def btnmultiply_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '*')
-
 
     def btndivide_pressed(c):
         pos = len(disp.get())
@@ -132,7 +122,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def cos_pressed(c):
         try:
             ans = float(disp.get())
@@ -145,7 +134,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def tan_pressed(c):
         try:
@@ -160,7 +148,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def arcsin_pressed(c):
         try:
             ans = float(disp.get())
@@ -174,7 +161,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def arccos_pressed(c):
         try:
             ans = float(disp.get())
@@ -187,7 +173,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def arctan_pressed(c):
         try:
@@ -209,7 +194,6 @@ class Calculator:
         pos = len(disp.get())
         disp.insert(pos, '**')
 
-
     def round_pressed(c):
         try:
             ans = float(disp.get())
@@ -219,7 +203,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def logarithm_pressed(c):
         try:
@@ -231,7 +214,6 @@ class Calculator:
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
 
-
     def fact_pressed(c):
         try:
             ans = float(disp.get())
@@ -241,7 +223,6 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
 
     def sqrt_pressed(c):
         try:
@@ -255,10 +236,10 @@ class Calculator:
 
 
     # These functions are for dot ".", pi, natural log (ln), natural number (e), convert (Radian & Degress), open (bl) & close(br) brackets, and Remainder integer (Modulo) buttons when pressed
+    
     def dot_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '.')
-
 
     def pi_pressed(c):
         if disp.get() == '0':
@@ -268,7 +249,6 @@ class Calculator:
         disp.insert(pos, ans)
         return str(ans)
 
-
     def e_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
@@ -277,18 +257,15 @@ class Calculator:
         disp.insert(pos, ans)
         return str(ans)
 
-
     def bl_pressed(c):
         if disp.get() == '0':
             disp.delete(0, END)
         pos = len(disp.get())
         disp.insert(pos, '(')
 
-
     def br_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, ')')
-
 
     def conv_pressed(c):
         global switch
@@ -299,7 +276,6 @@ class Calculator:
             switch = None
             conv_btn['text'] = "Rad"
 
-
     def ln_pressed(c):
         try:
             ans = float(disp.get())
@@ -309,11 +285,11 @@ class Calculator:
             return str(ans)
         except Exception:
             tkinter.messagebox.showerror("Value Error", "Check your values and operators")
-
-
+       
     def mod_pressed(c):
         pos = len(disp.get())
         disp.insert(pos, '%')
+        
 
     # These functions are for delete, clear(AC) and equal buttons when pressed
 
@@ -412,6 +388,7 @@ btn3.pack(side=LEFT, expand=TRUE, fill=BOTH)
 btnp = Button(btnrow1, text="+", font="Arial 23", relief=GROOVE, bd=0, command=c.btnplus_pressed, fg="white", bg="#333333")
 btnp.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
+
 # Row 2 Buttons
 
 btnrow2 = Frame(root)
@@ -444,6 +421,7 @@ btn6.pack(side=LEFT, expand=TRUE, fill=BOTH)
 btnm = Button(btnrow2, text="-", font="Arial 23", relief=GROOVE, bd=0, command=c.btnminus_pressed, fg="white", bg="#333333")
 btnm.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
+
 # Row 3 Buttons
 
 btnrow3 = Frame(root)
@@ -475,6 +453,7 @@ btn9.pack(side=LEFT, expand=TRUE, fill=BOTH)
 
 btnml = Button(btnrow3, text="*", font="Arial 23", relief=GROOVE, bd=0, command=c.btnmultiply_pressed, fg="white", bg="#333333")
 btnml.pack(side=LEFT, expand=TRUE, fill=BOTH)
+
 
 # Row 4 Buttons
 
